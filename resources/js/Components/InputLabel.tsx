@@ -10,11 +10,11 @@ export default function InputLabel({
         <label
             {...props}
             className={
-                `block text-sm font-medium text-gray-700 ` +
+                `floating-label ` +
                 className
             }
         >
-            {value ? value : children}
+           <span> {value ? value : children}</span>
         </label>
     );
 }

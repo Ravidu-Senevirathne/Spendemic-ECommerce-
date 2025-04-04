@@ -5,6 +5,7 @@ import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
+import Authenticated from '@/Layouts/AuthenticatedLayout';
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -23,7 +24,7 @@ export default function Register() {
     };
 
     return (
-        <GuestLayout>
+        <Authenticated>
             <Head title="Register" />
 
             <form onSubmit={submit}>
@@ -116,6 +117,6 @@ export default function Register() {
                     </PrimaryButton>
                 </div>
             </form>
-        </GuestLayout>
+        </Authenticated>
     );
 }

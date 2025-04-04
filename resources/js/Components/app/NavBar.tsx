@@ -9,7 +9,7 @@ function NavBar() {
             <div className="flex-1">
                 <Link href={"/"} className="btn btn-ghost text-xl">Spendemic</Link>
             </div>
-            <div className="flex-none">
+            <div className="flex-none gap-4">
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator">

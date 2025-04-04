@@ -27,9 +27,9 @@ export default function Register() {
         <Authenticated>
             <Head title="Register" />
 
-            <div className={'p-8'}>
+            <div className={'p-12'}>
                 <div className="card bg-white shadow max-w-[420px] mx-auto">
-                    <div className="card-body">
+                    <div className="card-body p-2">
                         <form onSubmit={submit}>
                             <div>
                                 <InputLabel htmlFor="name" value="Name" />

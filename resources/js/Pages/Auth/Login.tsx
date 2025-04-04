@@ -32,7 +32,7 @@ export default function Login({
     return (
         <Authenticated>
             <Head title="Log in" />
-            <div className={'p-8'}>
+            <div className={'p-12'}>
                 <div className="card bg-white shadow max-w-[420px] mx-auto">
                     <div className="card-body">
                         {status && (

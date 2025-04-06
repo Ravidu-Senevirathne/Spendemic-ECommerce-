@@ -1,7 +1,5 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import React from 'react';
+import { Head } from '@inertiajs/react';
 import { Link, usePage } from '@inertiajs/react';
 import { PropsWithChildren, ReactNode, useState } from 'react';
 import NavBar from '@/Components/app/NavBar';
@@ -10,14 +8,16 @@ export default function Authenticated({
     header,
     children,
 }: PropsWithChildren<{ header?: ReactNode }>) {
-    const user = usePage().props.auth.user;
+    // Use optional chaining to safely access user
+    const { auth } = usePage().props as any;
+    const user = auth?.user;
 
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
     return (
         <div className="min-h-screen bg-gray-100">
-        <NavBar/>
+            <NavBar />
 
             {header && (
                 <header className="bg-white shadow">

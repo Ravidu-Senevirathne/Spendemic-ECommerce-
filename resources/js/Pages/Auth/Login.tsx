@@ -6,7 +6,7 @@ import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
-import Authenticated from '@/Layouts/AuthenticatedLayout';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Login({
     status,
@@ -30,7 +30,7 @@ export default function Login({
     };
 
     return (
-        <Authenticated>
+        <AuthenticatedLayout>
             <Head title="Log in" />
             <div className={'p-12'}>
                 <div className="card bg-white shadow max-w-[420px] mx-auto">
@@ -88,8 +88,8 @@ export default function Login({
                                         }
                                     />
                                     <span className="ms-2 text-sm text-gray-600">
-                            Remember me
-                        </span>
+                                        Remember me
+                                    </span>
                                 </label>
                             </div>
 
@@ -111,6 +111,6 @@ export default function Login({
                     </div>
                 </div>
             </div>
-        </Authenticated>
+        </AuthenticatedLayout>
     );
 }

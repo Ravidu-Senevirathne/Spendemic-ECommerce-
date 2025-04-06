@@ -2,8 +2,10 @@ import React from 'react';
 import { Link, usePage } from '@inertiajs/react';
 
 function NavBar() {
-    const {auth} = usePage().props;
-    const {user} = auth;
+    // Safely access the auth object and user
+    const { auth } = usePage().props as any;
+    const user = auth?.user;
+
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="flex-1">
@@ -29,7 +31,7 @@ function NavBar() {
                         </div>
                     </div>
                 </div>
-                {user &&  <div className="dropdown dropdown-end">
+                {user && <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img

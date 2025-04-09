@@ -49,7 +49,8 @@ class CategoriesRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('parent.name')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\IconColumn::make('active'),
+                Tables\Columns\IconColumn::make('active')
+                ->boolean( ),
             ])
             ->filters([
                 // Add filters here if needed.
